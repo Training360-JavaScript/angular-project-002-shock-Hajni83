@@ -1,5 +1,3 @@
-<p>data-row works!</p>
-
 <div class="row">
   <div class="col-12 mb-1 pt-1 pb-1 d-flex justify-content-between">
     <app-data-cell [key]="'id'" [data]="dataRow"></app-data-cell>
@@ -7,8 +5,8 @@
     <app-data-cell [key]="'email'" [data]="dataRow"></app-data-cell>
     <app-data-cell [key]="'address'" [data]="dataRow"></app-data-cell>
     <app-data-cell [key]="'active'" [data]="dataRow"></app-data-cell>
-
+    <app-action-button-group (selectClick)="onSelectClicked()" (updateClick)="onUpdateClicked()" (deleteClick)="onDeleteClicked()"></app-action-button-group>
   </div>
 </div>
-<app-action-button-group></app-action-button-group>
+
 

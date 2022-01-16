@@ -1,4 +1,3 @@
-<p>data-list works!</p>
 <div class="row">
   <div class="col-12 mt-3 pt-1 pb-1 d-flex justify-content-around">
     <span class="text-bold">id</span>
@@ -6,10 +5,11 @@
     <span class="text-bold">email</span>
     <span class="text-bold">address</span>
     <span class="text-bold">active</span>
+    <span></span>
   </div>
 </div>
 <div class="row">
   <div class="col-12 mt-1 data-list-row" *ngFor="let row of dataList">
-    <app-data-row [dataRow]="row"></app-data-row>
+    <app-data-row [dataRow]="row" (selectClick)="onSelectClick()" (updateClick)="onUpdateClick()" (deleteClick)="onDeleteClick()"></app-data-row>
   </div>
 </div>
