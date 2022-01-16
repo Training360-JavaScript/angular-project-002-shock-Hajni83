@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { User } from './model/user';
 import { UserService } from './service/user.service';
 
@@ -10,6 +10,10 @@ import { UserService } from './service/user.service';
 export class AppComponent {
   title = 'The good Angular programmer';
 
-  constructor() {}
+users=this.userService.list;
+
+currentUser:User= new User();
+
+  constructor(private userService:UserService) {}
 
 }
